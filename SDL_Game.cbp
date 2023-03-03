@@ -32,6 +32,11 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="SDL_function.cpp" />
+		<Unit filename="SDL_function.h" />
+		<Unit filename="base_object.cpp" />
+		<Unit filename="base_object.h" />
+		<Unit filename="config.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
