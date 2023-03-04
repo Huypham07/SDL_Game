@@ -1,35 +1,30 @@
 #include <iostream>
 #include "SDL_function.h"
 #include "base_object.h"
-BaseObject welcome;
-Mix_Music *ost = NULL;
+#include "game.h"
 
 int main(int argv, char* argc[])
 {
-    initSDL(gWindow,gRenderer);
+    const int FPS = 60;
+    const int frameDelay = 1000/FPS;
 
-    welcome.loadTexture("image/welcome.png",gRenderer);
-    ost = loadMusic("sound/ost.mp3");
+    Uint32 frameStart;
+    int frameTime;
 
-    bool quit = false;
-    while (!quit){
-        while (SDL_PollEvent(&gEvent)!=0){
-            if (gEvent.type == SDL_QUIT){
-                quit = true;
-                break;
-            }
-            else if (gEvent.type == SDL_KEYDOWN){
-                quit = true;
-                break;
-            }
+    init();
+    bool isRunning = true;
+    while (isRunning){
+        frameStart = SDL_GetTicks();
+
+        handleEvent(isRunning);
+        update();
+        render();
+
+        frameTime = SDL_GetTicks() - frameStart;
+        if (frameDelay > frameTime){
+            SDL_Delay(frameDelay - frameTime);
         }
-        playMusic(ost);
-        SDL_RenderClear(gRenderer);
-        welcome.renderTexture(gRenderer, NULL);
-        SDL_RenderPresent(gRenderer);
-
-        SDL_Delay(50);
     }
-    quitSDL(gWindow,gRenderer);
+    clean();
     return 0;
 }

@@ -1,36 +1,43 @@
 # depslib dependency file v1.0
-1677812616 source:d:\uet\ltnc\sdl_game\base_object.cpp
+1677965332 source:d:\uet\ltnc\sdl_game\base_object.cpp
 	"base_object.h"
 
-1677812616 d:\uet\ltnc\sdl_game\base_object.h
+1677965307 d:\uet\ltnc\sdl_game\base_object.h
 	"SDL_function.h"
 
-1677812616 d:\uet\ltnc\sdl_game\sdl_function.h
+1677965569 d:\uet\ltnc\sdl_game\sdl_function.h
 	<iostream>
 	"config.h"
 	<SDL.h>
 	<SDL_image.h>
 	<SDL_mixer.h>
 
-1677830593 d:\uet\ltnc\sdl_game\config.h
+1677965569 d:\uet\ltnc\sdl_game\config.h
 
-1677830906 source:d:\uet\ltnc\sdl_game\main.cpp
+1677963451 source:d:\uet\ltnc\sdl_game\main.cpp
 	<iostream>
 	"SDL_function.h"
-	"base_object.h"
-
-1677812582 source:d:\uet\ltnc\sdl_game\sdl_function.cpp
-	<iostream>
-	"config.h"
-	<SDL.h>
-	<SDL_image.h>
-	<SDL_mixer.h>
-	"SDL_function.h"
-
-1677830740 source:d:\uet\ltnc\sdl_game\game.cpp
 	"base_object.h"
 	"game.h"
 
-1677830740 d:\uet\ltnc\sdl_game\game.h
+1677965307 source:d:\uet\ltnc\sdl_game\sdl_function.cpp
+	<iostream>
+	"config.h"
+	<SDL.h>
+	<SDL_image.h>
+	<SDL_mixer.h>
+	"SDL_function.h"
+
+1677968617 source:d:\uet\ltnc\sdl_game\game.cpp
+	"game.h"
+	"map.h"
+
+1677961713 d:\uet\ltnc\sdl_game\game.h
 	"base_object.h"
+
+1677965307 source:d:\uet\ltnc\sdl_game\map.cpp
+	"map.h"
+
+1677968777 d:\uet\ltnc\sdl_game\map.h
+	"game.h"
 

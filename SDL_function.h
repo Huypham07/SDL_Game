@@ -17,6 +17,9 @@ void logSDLError(std::ostream &os,
 void initSDL(SDL_Window *&window, SDL_Renderer *&renderer);
 void quitSDL(SDL_Window *window, SDL_Renderer *renderer);
 
+//IMAGE------------------------------------------------------
+SDL_Texture *loadTexture(const std::string &file, SDL_Renderer *renderer);
+
 
 //MIXER------------------------------------------------------
 Mix_Music *loadMusic(const std::string &file);

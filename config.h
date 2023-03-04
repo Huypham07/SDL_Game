@@ -13,7 +13,6 @@
 #define MAX_FAIL_SPEED 4
 #define PLAYER_SPEED 10
 
-#define FPS              30
 /*#define GRAVITY          2
 #define Y_VELOCITY_STEP  -20
 
@@ -32,23 +31,8 @@
 
 #define NUMSTATES        4
 
-#define BULLET_SPEED     15
-#define BULLET_DELAY     200
-#define BULLET_DAMAGE    15
 
-/* Zombie */
-#define ZOMBIE_WIDTH     96
-#define ZOMBIE_HEIGHT    96
-#define ZOMBIE_STEP      2
 
-#define ZREST_INDEX      0
-#define ZWALK_INDEX      1
-#define ZDEATH_INDEX     2
-#define ZATTACK_INDEX    3
-
-#define ZNUMSTATES       4
-
-#define ZOMBIE_DAMAGE    6
 
 #endif /* _CONFIG_H_ */
 
