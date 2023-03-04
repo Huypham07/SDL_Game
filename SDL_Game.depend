@@ -12,9 +12,9 @@
 	<SDL_image.h>
 	<SDL_mixer.h>
 
-1677812616 d:\uet\ltnc\sdl_game\config.h
+1677830593 d:\uet\ltnc\sdl_game\config.h
 
-1677812616 source:d:\uet\ltnc\sdl_game\main.cpp
+1677830906 source:d:\uet\ltnc\sdl_game\main.cpp
 	<iostream>
 	"SDL_function.h"
 	"base_object.h"
@@ -26,4 +26,11 @@
 	<SDL_image.h>
 	<SDL_mixer.h>
 	"SDL_function.h"
+
+1677830740 source:d:\uet\ltnc\sdl_game\game.cpp
+	"base_object.h"
+	"game.h"
+
+1677830740 d:\uet\ltnc\sdl_game\game.h
+	"base_object.h"
 

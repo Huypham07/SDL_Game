@@ -12,9 +12,9 @@
 #define GRAVITY_SPEED 1
 #define MAX_FAIL_SPEED 4
 #define PLAYER_SPEED 10
-/*
+
 #define FPS              30
-#define GRAVITY          2
+/*#define GRAVITY          2
 #define Y_VELOCITY_STEP  -20
 
 #define FRAME_STEP       0.3

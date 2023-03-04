@@ -2,12 +2,14 @@
 #include "SDL_function.h"
 #include "base_object.h"
 BaseObject welcome;
+Mix_Music *ost = NULL;
 
 int main(int argv, char* argc[])
 {
     initSDL(gWindow,gRenderer);
 
     welcome.loadTexture("image/welcome.png",gRenderer);
+    ost = loadMusic("sound/ost.mp3");
 
     bool quit = false;
     while (!quit){
@@ -21,6 +23,7 @@ int main(int argv, char* argc[])
                 break;
             }
         }
+        playMusic(ost);
         SDL_RenderClear(gRenderer);
         welcome.renderTexture(gRenderer, NULL);
         SDL_RenderPresent(gRenderer);
