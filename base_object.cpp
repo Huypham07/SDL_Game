@@ -9,6 +9,7 @@ BaseObject::BaseObject()
 void BaseObject::load(const std::string &file, SDL_Renderer *renderer)
 {
     p_object = loadTexture(file, renderer);
+    SDL_QueryTexture(p_object, NULL, NULL, &destRect.w,&destRect.h);
 }
 
 void BaseObject::renderTexture(SDL_Renderer *renderer)

@@ -5,8 +5,9 @@
 #define SCREEN_WIDTH            1280
 #define SCREEN_HEIGHT           720
 #define WINDOW_TITLE     "Trap Adventure 2"
+
 #define TILE_SIZE               64
-#define MAX_MAP_X               20
+#define MAX_MAP_X               200
 #define MAX_MAP_Y               12
 //speed
 #define GRAVITY_SPEED 1

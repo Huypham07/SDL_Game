@@ -7,9 +7,10 @@ struct BaseObject
 {
     BaseObject();
     SDL_Texture *p_object;
-    int x_pos,y_pos;
+    //int x_pos,y_pos;
     int frame;
     SDL_Rect srcRect, destRect;
+
     void SetRect(const int &x, const int &y)
     {
         destRect.x = x;

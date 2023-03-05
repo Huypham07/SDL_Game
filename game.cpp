@@ -16,6 +16,8 @@ void init(SDL_Window *&window, SDL_Renderer *&renderer)
     player->frame = 6;
 
     map_ = new Map_();
+    map_->Load_tileSet(renderer, "image/tileset.png");
+    map_->LoadMap("image/map.dat");
 }
 void handleEvent(bool &isRunning, SDL_Event e)
 {
@@ -30,7 +32,6 @@ void handleEvent(bool &isRunning, SDL_Event e)
 }
 void update()
 {
-    map_->LoadMap("image/map.txt");
     if (cnt < player->frame)
     {
         player->srcRect.x = 80 * cnt;
