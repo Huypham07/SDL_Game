@@ -12,8 +12,9 @@ struct Map_
     int Map[20][12];
 
     Map_();
+    void Load_tileSet(SDL_Renderer *renderer);
     void LoadMap(const char* file);
-    void DrawMap();
+    void DrawMap(SDL_Renderer *renderer);
 
 };
 

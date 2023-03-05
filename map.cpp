@@ -2,9 +2,12 @@
 
 Map_::Map_()
 {
+
+}
+void Map_::Load_tileSet(SDL_Renderer *renderer){
     for (int i=0; i<8; i++)
     {
-        tileSet[i].load("image/tileset.png");
+        tileSet[i].load("image/tileset.png", renderer);
     }
 }
 void Map_::LoadMap(const char* file)
@@ -18,7 +21,7 @@ void Map_::LoadMap(const char* file)
         }
     }
 }
-void Map_::DrawMap()
+void Map_::DrawMap(SDL_Renderer *renderer)
 {
     int type = 0;
 
@@ -28,7 +31,7 @@ void Map_::DrawMap()
             switch (type)
             {
             case 0:
-                tileSet[0].renderTexture();
+                tileSet[0].renderTexture(renderer);
                 break;
             }
         }

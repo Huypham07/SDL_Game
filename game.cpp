@@ -1,25 +1,26 @@
 #include "game.h"
 #include "map.h"
 //BaseObject welcome;
+
 Map_ *map_;
 BaseObject *player;
 int cnt = 0;
-void init(){
-    initSDL(gWindow,gRenderer);
+void init(SDL_Window *&window, SDL_Renderer *&renderer){
+    initSDL(window,renderer);
     //welcome.load("image/welcome.png");
     player = new BaseObject();
-    player->load("image/char.png");
+    player->load("image/char.png",renderer);
     player->destRect.x = 0;
     player->destRect.y = 0;
     player->frame = 6;
 
     map_ = new Map_();
 }
-void handleEvent(bool &isRunning)
+void handleEvent(bool &isRunning, SDL_Event e)
 {
-    while (SDL_PollEvent(&gEvent)!=0)
+    while (SDL_PollEvent(&e)!=0)
     {
-        if (gEvent.type == SDL_QUIT)
+        if (e.type == SDL_QUIT)
         {
             isRunning = false;
             break;
@@ -39,15 +40,15 @@ void update(){
     player->destRect.w = player->srcRect.w;
     player->destRect.h = player->srcRect.h;
 }
-void render(){
-    SDL_RenderClear(gRenderer);
-    map_->DrawMap();
-    player->renderTexture();
-    SDL_RenderPresent(gRenderer);
+void render(SDL_Renderer *renderer){
+    SDL_RenderClear(renderer);
+    map_->DrawMap(renderer);
+    player->renderTexture(renderer);
+    SDL_RenderPresent(renderer);
 
 }
-void clean(){
+void clean(SDL_Window *window, SDL_Renderer *renderer){
     //welcome.Free();
     player->Free();
-    quitSDL(gWindow,gRenderer);
+    quitSDL(window,renderer);
 }

@@ -16,8 +16,8 @@ struct BaseObject
         destRect.y = y;
     }
 
-    void load(const std::string &file);
-    void renderTexture();
+    void load(const std::string &file,SDL_Renderer *renderer);
+    void renderTexture(SDL_Renderer *renderer);
     void Free();
 };
 #endif // BASE_OBJECT_H

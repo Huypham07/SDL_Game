@@ -1,30 +1,34 @@
-#include <iostream>
-#include "SDL_function.h"
-#include "base_object.h"
 #include "game.h"
+
+SDL_Window *gWindow = NULL;
+SDL_Renderer *gRenderer = NULL;
+SDL_Event gEvent;
 
 int main(int argv, char* argc[])
 {
+
     const int FPS = 60;
     const int frameDelay = 1000/FPS;
 
     Uint32 frameStart;
     int frameTime;
 
-    init();
+    init(gWindow,gRenderer);
     bool isRunning = true;
-    while (isRunning){
+    while (isRunning)
+    {
         frameStart = SDL_GetTicks();
 
-        handleEvent(isRunning);
+        handleEvent(isRunning, gEvent);
         update();
-        render();
+        render(gRenderer);
 
         frameTime = SDL_GetTicks() - frameStart;
-        if (frameDelay > frameTime){
+        if (frameDelay > frameTime)
+        {
             SDL_Delay(frameDelay - frameTime);
         }
     }
-    clean();
+    clean(gWindow, gRenderer);
     return 0;
 }

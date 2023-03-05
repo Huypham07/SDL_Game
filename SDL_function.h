@@ -7,9 +7,6 @@
 #include <SDL_image.h>
 #include <SDL_mixer.h>
 
-static SDL_Window *gWindow = NULL;
-static SDL_Renderer *gRenderer = NULL;
-static SDL_Event gEvent;
 
 //INIT
 void logSDLError(std::ostream &os,

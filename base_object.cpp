@@ -6,14 +6,14 @@ BaseObject::BaseObject()
 
 }
 
-void BaseObject::load(const std::string &file)
+void BaseObject::load(const std::string &file, SDL_Renderer *renderer)
 {
-    p_object = loadTexture(file, gRenderer);
+    p_object = loadTexture(file, renderer);
 }
 
-void BaseObject::renderTexture()
+void BaseObject::renderTexture(SDL_Renderer *renderer)
 {
-    SDL_RenderCopy(gRenderer, p_object,&srcRect,&destRect);
+    SDL_RenderCopy(renderer, p_object,&srcRect,&destRect);
 }
 
 void BaseObject::Free()
