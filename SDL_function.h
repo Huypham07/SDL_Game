@@ -7,7 +7,6 @@
 #include <SDL_image.h>
 #include <SDL_mixer.h>
 
-
 //INIT
 void logSDLError(std::ostream &os,
                  const std::string &msg, bool fatal = false);
@@ -16,7 +15,6 @@ void quitSDL(SDL_Window *window, SDL_Renderer *renderer);
 
 //IMAGE------------------------------------------------------
 SDL_Texture *loadTexture(const std::string &file, SDL_Renderer *renderer);
-
 
 //MIXER------------------------------------------------------
 Mix_Music *loadMusic(const std::string &file);

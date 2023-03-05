@@ -5,7 +5,8 @@
 Map_ *map_;
 BaseObject *player;
 int cnt = 0;
-void init(SDL_Window *&window, SDL_Renderer *&renderer){
+void init(SDL_Window *&window, SDL_Renderer *&renderer)
+{
     initSDL(window,renderer);
     //welcome.load("image/welcome.png");
     player = new BaseObject();
@@ -27,27 +28,31 @@ void handleEvent(bool &isRunning, SDL_Event e)
         }
     }
 }
-void update(){
+void update()
+{
     map_->LoadMap("image/map.txt");
-    if (cnt < player->frame){
-            player->srcRect.x = 80 * cnt;
-            player->srcRect.y = 224;
-            player->srcRect.w = 80;
-            player->srcRect.h = 112;
+    if (cnt < player->frame)
+    {
+        player->srcRect.x = 80 * cnt;
+        player->srcRect.y = 224;
+        player->srcRect.w = 80;
+        player->srcRect.h = 112;
     }
     else cnt = 0;
     player->destRect.x ++;
     player->destRect.w = player->srcRect.w;
     player->destRect.h = player->srcRect.h;
 }
-void render(SDL_Renderer *renderer){
+void render(SDL_Renderer *renderer)
+{
     SDL_RenderClear(renderer);
     map_->DrawMap(renderer);
     player->renderTexture(renderer);
     SDL_RenderPresent(renderer);
 
 }
-void clean(SDL_Window *window, SDL_Renderer *renderer){
+void clean(SDL_Window *window, SDL_Renderer *renderer)
+{
     //welcome.Free();
     player->Free();
     quitSDL(window,renderer);
