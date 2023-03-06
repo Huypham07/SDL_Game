@@ -7,7 +7,7 @@ SDL_Event gEvent;
 int main(int argv, char* argc[])
 {
 
-    const int FPS = 60;
+    const int FPS = 15;
     const int frameDelay = 1000/FPS;
 
     Uint32 frameStart;

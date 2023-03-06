@@ -5,10 +5,10 @@ Map_::Map_()
 void Map_::Load_tileSet(SDL_Renderer *renderer, const std::string &file)
 {
 
-    for (int i=0; i<8; i++)
+    for (int i=0; i<11; i++)
     {
         tileSet[i].load(file, renderer);
-        tileSet[i].destRect.w /= 8;
+        tileSet[i].destRect.w /= 11;
         tileSet[i].srcRect.x = i*TILE_SIZE;
         tileSet[i].srcRect.y = 0;
         tileSet[i].srcRect.w = TILE_SIZE;

@@ -8,7 +8,7 @@ struct Map_
     int start_x, start_y;
     int max_x,max_y;
 
-    BaseObject tileSet[8];
+    BaseObject tileSet[11];
     int tileMap[MAX_MAP_Y][MAX_MAP_X];
 
     Map_();

@@ -20,9 +20,9 @@
 #define FRAME_STEP       0.3
 */
 /* Character */
-#define CHARACTER_WIDTH  96
-#define CHARACTER_HEIGHT 96
-#define CHARACTER_BACK   0x00, 0x80,0x00
+#define CHARACTER_WIDTH  45
+#define CHARACTER_HEIGHT 64
+
 #define CHARACTER_STEP   10
 
 #define REST_INDEX       0
