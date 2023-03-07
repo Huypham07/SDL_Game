@@ -35,25 +35,41 @@ void player::InputEvent(SDL_Event e){
         {
         case SDLK_RIGHT:
             {
+                std::cout<<"move to the right"<<std::endl;
                 current.stt_right = true;
+                current.stt_left = false;
+                current.stt_up = false;
+                current.stt_down = false;
                 input_type.right = 1;
             }
             break;
         case SDLK_LEFT:
             {
+                std::cout<<"move to the left"<<std::endl;
+                current.stt_right = false;
                 current.stt_left = true;
+                current.stt_up = false;
+                current.stt_down = false;
                 input_type.left = 1;
             }
             break;
         case SDLK_DOWN:
             {
+                std::cout<<"sit down"<<std::endl;
+                current.stt_right = false;
+                current.stt_left = false;
+                current.stt_up = false;
                 current.stt_down = true;
                 input_type.down = 1;
             }
             break;
         case SDLK_UP:
             {
+                std::cout<<"jump"<<std::endl;
+                current.stt_right = false;
+                current.stt_left = false;
                 current.stt_up = true;
+                current.stt_down = false;
                 input_type.up = 1;
             }
             break;
@@ -61,33 +77,33 @@ void player::InputEvent(SDL_Event e){
 
     }
     else if (e.type == SDL_KEYUP){
-                switch (e.key.keysym.sym)
-        {
-        case SDLK_RIGHT:
-            {
-                current.stt_right = false;
-                input_type.right = 0;
-            }
-            break;
-        case SDLK_LEFT:
-            {
-                current.stt_left = false;
-                input_type.left = 0;
-            }
-            break;
-        case SDLK_DOWN:
-            {
-                current.stt_down = false;
-                input_type.down = 0;
-            }
-            break;
-        case SDLK_UP:
-            {
-                current.stt_up = false;
-                input_type.up = 0;
-            }
-            break;
-        }
+//                switch (e.key.keysym.sym)
+//        {
+//        case SDLK_RIGHT:
+//            {
+//                current.stt_right = false;
+//                input_type.right = 0;
+//            }
+//            break;
+//        case SDLK_LEFT:
+//            {
+//                current.stt_left = false;
+//                input_type.left = 0;
+//            }
+//            break;
+//        case SDLK_DOWN:
+//            {
+//                current.stt_down = false;
+//                input_type.down = 0;
+//            }
+//            break;
+//        case SDLK_UP:
+//            {
+//                current.stt_up = false;
+//                input_type.up = 0;
+//            }
+//            break;
+//        }
 
     }
 }
