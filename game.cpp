@@ -33,10 +33,7 @@ void handleEvent(bool &isRunning, SDL_Event e)
 }
 void update()
 {
-
-    character.handleInput();
-    cnt++;
-    std::cout<<cnt<<std::endl;
+    character.handleInput(map_);
 }
 void render(SDL_Renderer *renderer)
 {

@@ -9,12 +9,13 @@
 #define TILE_SIZE               64
 #define MAX_MAP_X               200
 #define MAX_MAP_Y               12
+#define BLANK_TILE              0
 //speed
-#define GRAVITY_SPEED 1
-#define MAX_FAIL_SPEED 4
-#define PLAYER_SPEED 10
+#define FREE_FALL 1
+#define MAX_FREE_FALL 4
+#define PLAYER_SPEED 5
 
-/*#define GRAVITY          2
+/*
 #define Y_VELOCITY_STEP  -20
 
 #define FRAME_STEP       0.3
@@ -22,7 +23,7 @@
 /* Character */
 #define CHARACTER_WIDTH  45
 #define CHARACTER_HEIGHT 64
-
+#define FIT_IMAGE        2
 #define CHARACTER_STEP   10
 
 #define REST_INDEX       0
