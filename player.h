@@ -4,13 +4,6 @@
 #include "base_object.h"
 #include "map.h"
 
-struct input
-{
-    int right;
-    int left;
-    int up;
-    int down;
-};
 struct player_state
 {
     bool stt_right;
@@ -33,7 +26,6 @@ struct player
     int w_frame;
     int h_frame;
     player_state current;
-    input input_type;
     SDL_Rect player_rect;
     SDL_Rect frame_src[7];
     int frame;

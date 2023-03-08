@@ -11,9 +11,10 @@
 #define MAX_MAP_Y               12
 #define BLANK_TILE              0
 //speed
-#define FREE_FALL 1
-#define MAX_FREE_FALL 4
-#define PLAYER_SPEED 5
+#define FREE_FALL        5
+#define MAX_FREE_FALL    15
+#define PLAYER_SPEED     6
+#define JUMP_HIGH        40
 
 /*
 #define Y_VELOCITY_STEP  -20
@@ -23,13 +24,7 @@
 /* Character */
 #define CHARACTER_WIDTH  45
 #define CHARACTER_HEIGHT 64
-#define FIT_IMAGE        2
 #define CHARACTER_STEP   10
-
-#define REST_INDEX       0
-#define WALK_INDEX       1
-#define JUMP_INDEX       2
-#define ATTACK_INDEX     3
 
 #define NUMSTATES        4
 
