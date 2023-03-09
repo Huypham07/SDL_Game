@@ -12,9 +12,9 @@
 	<SDL_image.h>
 	<SDL_mixer.h>
 
-1678275573 d:\uet\ltnc\sdl_game\config.h
+1678291970 d:\uet\ltnc\sdl_game\config.h
 
-1678255703 source:d:\uet\ltnc\sdl_game\main.cpp
+1678320435 source:d:\uet\ltnc\sdl_game\main.cpp
 	"game.h"
 
 1678160976 source:d:\uet\ltnc\sdl_game\sdl_function.cpp
@@ -39,10 +39,10 @@
 1678160976 d:\uet\ltnc\sdl_game\map.h
 	"game.h"
 
-1678271096 d:\uet\ltnc\sdl_game\player.h
+1678323636 d:\uet\ltnc\sdl_game\player.h
 	"base_object.h"
 	"map.h"
 
-1678275378 source:d:\uet\ltnc\sdl_game\player.cpp
+1678333998 source:d:\uet\ltnc\sdl_game\player.cpp
 	"player.h"
 

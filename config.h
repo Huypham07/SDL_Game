@@ -13,23 +13,13 @@
 //speed
 #define FREE_FALL        5
 #define MAX_FREE_FALL    15
-#define PLAYER_SPEED     6
-#define JUMP_HIGH        40
+#define PLAYER_SPEED     10
+#define JUMP_HIGH        50
 
-/*
-#define Y_VELOCITY_STEP  -20
-
-#define FRAME_STEP       0.3
-*/
-/* Character */
+// Character
 #define CHARACTER_WIDTH  45
 #define CHARACTER_HEIGHT 64
 #define CHARACTER_STEP   10
-
-#define NUMSTATES        4
-
-
-
 
 #endif /* _CONFIG_H_ */
 
