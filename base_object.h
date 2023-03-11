@@ -7,23 +7,16 @@ struct BaseObject
 {
     BaseObject();
     SDL_Texture *p_object;
-    SDL_Rect rect_;
+    SDL_Rect srcRect, destRect;
+
     void SetRect(const int &x, const int &y)
     {
-        rect_.x = x;
-        rect_.y = y;
-    }
-    SDL_Rect GetRect() const
-    {
-        return rect_;
-    }
-    SDL_Texture *GetObject() const
-    {
-        return p_object;
+        destRect.x = x;
+        destRect.y = y;
     }
 
-    void loadTexture(const std::string &file, SDL_Renderer *renderer);
-    void renderTexture(SDL_Renderer *renderer,const SDL_Rect *srcRect);
+    void load(const std::string &file,SDL_Renderer *renderer);
+    void renderTexture(SDL_Renderer *renderer);
     void Free();
 };
 #endif // BASE_OBJECT_H

@@ -5,50 +5,21 @@
 #define SCREEN_WIDTH            1280
 #define SCREEN_HEIGHT           720
 #define WINDOW_TITLE     "Trap Adventure 2"
+
 #define TILE_SIZE               64
-#define MAX_MAP_X               20
+#define MAX_MAP_X               200
 #define MAX_MAP_Y               12
+#define BLANK_TILE              0
 //speed
-#define GRAVITY_SPEED 1
-#define MAX_FAIL_SPEED 4
-#define PLAYER_SPEED 10
-/*
-#define FPS              30
-#define GRAVITY          2
-#define Y_VELOCITY_STEP  -20
+#define FREE_FALL        5
+#define MAX_FREE_FALL    15
+#define PLAYER_SPEED     10
+#define JUMP_HIGH        50
 
-#define FRAME_STEP       0.3
-*/
-/* Character */
-#define CHARACTER_WIDTH  96
-#define CHARACTER_HEIGHT 96
-#define CHARACTER_BACK   0x00, 0x80,0x00
+// Character
+#define CHARACTER_WIDTH  45
+#define CHARACTER_HEIGHT 64
 #define CHARACTER_STEP   10
-
-#define REST_INDEX       0
-#define WALK_INDEX       1
-#define JUMP_INDEX       2
-#define ATTACK_INDEX     3
-
-#define NUMSTATES        4
-
-#define BULLET_SPEED     15
-#define BULLET_DELAY     200
-#define BULLET_DAMAGE    15
-
-/* Zombie */
-#define ZOMBIE_WIDTH     96
-#define ZOMBIE_HEIGHT    96
-#define ZOMBIE_STEP      2
-
-#define ZREST_INDEX      0
-#define ZWALK_INDEX      1
-#define ZDEATH_INDEX     2
-#define ZATTACK_INDEX    3
-
-#define ZNUMSTATES       4
-
-#define ZOMBIE_DAMAGE    6
 
 #endif /* _CONFIG_H_ */
 

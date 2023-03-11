@@ -1,29 +1,48 @@
 # depslib dependency file v1.0
-1677812616 source:d:\uet\ltnc\sdl_game\base_object.cpp
+1678160976 source:d:\uet\ltnc\sdl_game\base_object.cpp
 	"base_object.h"
 
-1677812616 d:\uet\ltnc\sdl_game\base_object.h
+1678160976 d:\uet\ltnc\sdl_game\base_object.h
 	"SDL_function.h"
 
-1677812616 d:\uet\ltnc\sdl_game\sdl_function.h
+1678160976 d:\uet\ltnc\sdl_game\sdl_function.h
 	<iostream>
 	"config.h"
 	<SDL.h>
 	<SDL_image.h>
 	<SDL_mixer.h>
 
-1677812616 d:\uet\ltnc\sdl_game\config.h
+1678291970 d:\uet\ltnc\sdl_game\config.h
 
-1677812616 source:d:\uet\ltnc\sdl_game\main.cpp
-	<iostream>
-	"SDL_function.h"
-	"base_object.h"
+1678320435 source:d:\uet\ltnc\sdl_game\main.cpp
+	"game.h"
 
-1677812582 source:d:\uet\ltnc\sdl_game\sdl_function.cpp
+1678160976 source:d:\uet\ltnc\sdl_game\sdl_function.cpp
 	<iostream>
 	"config.h"
 	<SDL.h>
 	<SDL_image.h>
 	<SDL_mixer.h>
 	"SDL_function.h"
+
+1678271074 source:d:\uet\ltnc\sdl_game\game.cpp
+	"game.h"
+	"map.h"
+	"player.h"
+
+1678160976 d:\uet\ltnc\sdl_game\game.h
+	"base_object.h"
+
+1678160976 source:d:\uet\ltnc\sdl_game\map.cpp
+	"map.h"
+
+1678160976 d:\uet\ltnc\sdl_game\map.h
+	"game.h"
+
+1678323636 d:\uet\ltnc\sdl_game\player.h
+	"base_object.h"
+	"map.h"
+
+1678333998 source:d:\uet\ltnc\sdl_game\player.cpp
+	"player.h"
 

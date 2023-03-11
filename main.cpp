@@ -1,32 +1,34 @@
-#include <iostream>
-#include "SDL_function.h"
-#include "base_object.h"
-BaseObject welcome;
+#include "game.h"
+
+SDL_Window *gWindow = NULL;
+SDL_Renderer *gRenderer = NULL;
+SDL_Event gEvent;
 
 int main(int argv, char* argc[])
 {
-    initSDL(gWindow,gRenderer);
 
-    welcome.loadTexture("image/welcome.png",gRenderer);
+    const int FPS = 30;
+    const int frameDelay = 1000/FPS;
 
-    bool quit = false;
-    while (!quit){
-        while (SDL_PollEvent(&gEvent)!=0){
-            if (gEvent.type == SDL_QUIT){
-                quit = true;
-                break;
-            }
-            else if (gEvent.type == SDL_KEYDOWN){
-                quit = true;
-                break;
-            }
+    Uint32 frameStart;
+    int frameTime;
+
+    init(gWindow,gRenderer);
+    bool isRunning = true;
+    while (isRunning)
+    {
+        frameStart = SDL_GetTicks();
+
+        handleEvent(isRunning, gEvent);
+        update();
+        render(gRenderer);
+
+        frameTime = SDL_GetTicks() - frameStart;
+        if (frameDelay > frameTime)
+        {
+            SDL_Delay(frameDelay - frameTime);
         }
-        SDL_RenderClear(gRenderer);
-        welcome.renderTexture(gRenderer, NULL);
-        SDL_RenderPresent(gRenderer);
-
-        SDL_Delay(50);
     }
-    quitSDL(gWindow,gRenderer);
+    clean(gWindow, gRenderer);
     return 0;
 }
