@@ -1,11 +1,11 @@
-#ifndef BASE_OBJECT_H
-#define BASE_OBJECT_H
+#ifndef IMAGE_OBJECT_H
+#define IMAGE_OBJECT_H
 
 #include "SDL_function.h"
 
-struct BaseObject
+struct ImgObject
 {
-    BaseObject();
+    ImgObject();
     SDL_Texture *p_object;
     SDL_Rect srcRect, destRect;
 
@@ -14,10 +14,15 @@ struct BaseObject
         destRect.x = x;
         destRect.y = y;
     }
-
+    void SetRect(const int &w, const int &h, const int &x, const int &y){
+        destRect.w = w;
+        destRect.h = h;
+        destRect.x = x;
+        destRect.y = y;
+    }
     void load(const std::string &file,SDL_Renderer *renderer);
     void renderTexture(SDL_Renderer *renderer);
     void Free();
 };
-#endif // BASE_OBJECT_H
+#endif // IMAGE_OBJECT_H
 

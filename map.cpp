@@ -1,43 +1,38 @@
 #include "map.h"
-
+#include <fstream>
 Map_::Map_()
 {}
 void Map_::Load_tileSet(SDL_Renderer *renderer, const std::string &file)
 {
-
     for (int i=0; i<11; i++)
     {
         tileSet[i].load(file, renderer);
-        tileSet[i].destRect.w /= 11;
-        tileSet[i].srcRect.x = i*TILE_SIZE;
+        tileSet[i].destRect.w = TILE_SIZE;
+        tileSet[i].destRect.h = TILE_SIZE;
+        tileSet[i].srcRect.w /=11;
+        tileSet[i].srcRect.x = i*tileSet[i].srcRect.w;
         tileSet[i].srcRect.y = 0;
-        tileSet[i].srcRect.w = TILE_SIZE;
-        tileSet[i].srcRect.h = TILE_SIZE;
     }
 }
-void Map_::LoadMap(const char* file)
+void Map_::LoadMap(const std::string &file)
 {
-    freopen(file, "r", stdin);
-    max_x = 0;
-    max_y = 0;
-    for (int i = 0; i < MAX_MAP_Y; i++)
+    std::ifstream file_map;
+    file_map.open(file,std::ios::in);
+    while (!file_map.eof())
     {
-        for (int j = 0; j < MAX_MAP_X; j++)
+        if (file_map)
         {
-            std::cin >> tileMap[i][j];
-            int val = tileMap[i][j];
-            if (val>0){
-                if (j > max_x) max_x = j;
-                if (i > max_y) max_y = i;
+            for (int i = 0; i < MAX_MAP_Y; i++)
+            {
+                for (int j = 0; j < MAX_MAP_X; j++)
+                {
+                    file_map >> tileMap[i][j];
+                }
             }
-
         }
     }
-    max_x = (max_x + 1) * TILE_SIZE;
-    max_y = (max_y + 1) * TILE_SIZE;
-
+    file_map.close();
     start_x = 0;
-    start_y = 0;
 }
 void Map_::DrawMap(SDL_Renderer *renderer)
 {
@@ -51,15 +46,18 @@ void Map_::DrawMap(SDL_Renderer *renderer)
     map_x = start_x/TILE_SIZE;
     x1 = (start_x % TILE_SIZE) * -1;
     x2 = x1 + SCREEN_WIDTH;
-    map_y = start_y/TILE_SIZE;
-    y1 = (start_y % TILE_SIZE) * -1;
-    y2 = y1 + SCREEN_HEIGHT;
+    if (x1 != 0) x2+= TILE_SIZE;
+    y1 = 0;
+    y2 = SCREEN_HEIGHT;
 
-    for (int i=y1; i<=y2;i+=TILE_SIZE){
+    for (int i=y1; i<=y2; i+=TILE_SIZE)
+    {
         map_x = start_x/TILE_SIZE;
-        for (int j=x1; j<x2; j+=TILE_SIZE){
+        for (int j=x1; j<x2; j+=TILE_SIZE)
+        {
             int val = tileMap[map_y][map_x];
-            if (val > 0){
+            if (val > 0)
+            {
                 tileSet[val-1].SetRect(j,i);
                 tileSet[val-1].renderTexture(renderer);
             }

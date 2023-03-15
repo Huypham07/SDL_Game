@@ -1,7 +1,7 @@
 #ifndef GAME_H
 #define GAME_H
 
-#include "base_object.h"
+#include "img_object.h"
 
 void init(SDL_Window *&window, SDL_Renderer *&renderer);
 void handleEvent(bool &isRunning, SDL_Event e);

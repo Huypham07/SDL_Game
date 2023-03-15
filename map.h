@@ -5,15 +5,14 @@
 
 struct Map_
 {
-    int start_x, start_y;
-    int max_x,max_y;
+    int start_x;
 
-    BaseObject tileSet[11];
+    ImgObject tileSet[11];
     int tileMap[MAX_MAP_Y][MAX_MAP_X];
 
     Map_();
     void Load_tileSet(SDL_Renderer *renderer, const std::string &file);
-    void LoadMap(const char* file);
+    void LoadMap(const std::string &file);
     void DrawMap(SDL_Renderer *renderer);
 
 };

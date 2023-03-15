@@ -1,12 +1,12 @@
-#include "base_object.h"
+#include "img_object.h"
 
-BaseObject::BaseObject()
+ImgObject::ImgObject()
 {
     p_object = NULL;
 
 }
 
-void BaseObject::load(const std::string &file, SDL_Renderer *renderer)
+void ImgObject::load(const std::string &file, SDL_Renderer *renderer)
 {
     p_object = loadTexture(file, renderer);
     SDL_QueryTexture(p_object, NULL, NULL, &destRect.w,&destRect.h);
@@ -14,12 +14,12 @@ void BaseObject::load(const std::string &file, SDL_Renderer *renderer)
     srcRect.h = destRect.h;
 }
 
-void BaseObject::renderTexture(SDL_Renderer *renderer)
+void ImgObject::renderTexture(SDL_Renderer *renderer)
 {
     SDL_RenderCopy(renderer, p_object,&srcRect,&destRect);
 }
 
-void BaseObject::Free()
+void ImgObject::Free()
 {
     SDL_DestroyTexture(p_object);
     p_object = NULL;

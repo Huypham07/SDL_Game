@@ -12,13 +12,13 @@
 #define BLANK_TILE              0
 //speed
 #define FREE_FALL        5
-#define MAX_FREE_FALL    15
+#define MAX_FREE_FALL    10
 #define PLAYER_SPEED     10
-#define JUMP_HIGH        50
+#define JUMP_HIGH        58
 
 // Character
-#define CHARACTER_WIDTH  45
-#define CHARACTER_HEIGHT 64
+#define CHARACTER_WIDTH  30
+#define CHARACTER_HEIGHT 45
 #define CHARACTER_STEP   10
 
 #endif /* _CONFIG_H_ */
