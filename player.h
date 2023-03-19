@@ -40,7 +40,9 @@ struct player
     void Check_limited_Pos_X(Map_ *map_);
     void Check_limited_Pos_Y(Map_ *map_);
     void handleInput(Map_ *map_);
-    void renderFrame(SDL_Renderer *renderer);
-
+    void renderFrame(SDL_Renderer *renderer, Map_ *map_);
+    bool trap_checking(Map_ *map_);
+    bool WinState(Map_ *map_);
+    void Restart();
 };
 #endif // PLAYER_H

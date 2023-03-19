@@ -12,39 +12,52 @@
 	<SDL_image.h>
 	<SDL_mixer.h>
 
-1678896745 d:\uet\ltnc\sdl_game\config.h
+1679148449 d:\uet\ltnc\sdl_game\config.h
 
-1678896853 source:d:\uet\ltnc\sdl_game\main.cpp
+1679197881 source:d:\uet\ltnc\sdl_game\main.cpp
 	"game.h"
 
-1678767052 source:d:\uet\ltnc\sdl_game\sdl_function.cpp
+1679109195 source:d:\uet\ltnc\sdl_game\sdl_function.cpp
 	"SDL_function.h"
 
-1678876629 source:d:\uet\ltnc\sdl_game\game.cpp
+1679204180 source:d:\uet\ltnc\sdl_game\game.cpp
 	"game.h"
 	"Map.h"
 	"player.h"
+	"start_game.h"
 
 1678636298 d:\uet\ltnc\sdl_game\game.h
 	"img_object.h"
 
-1678899045 source:d:\uet\ltnc\sdl_game\map.cpp
+1679152477 source:d:\uet\ltnc\sdl_game\map.cpp
 	"map.h"
 	<fstream>
 
-1678899606 d:\uet\ltnc\sdl_game\map.h
+1679148449 d:\uet\ltnc\sdl_game\map.h
 	"game.h"
 
-1678708806 d:\uet\ltnc\sdl_game\player.h
+1679201140 d:\uet\ltnc\sdl_game\player.h
 	"img_object.h"
 	"map.h"
 
-1678899513 source:d:\uet\ltnc\sdl_game\player.cpp
+1679201140 source:d:\uet\ltnc\sdl_game\player.cpp
 	"player.h"
 
-1678636014 source:d:\uet\ltnc\sdl_game\img_object.cpp
+1679203028 source:d:\uet\ltnc\sdl_game\img_object.cpp
 	"img_object.h"
 
 1678640223 d:\uet\ltnc\sdl_game\img_object.h
 	"SDL_function.h"
+
+1679109206 source:d:\uet\ltnc\sdl_game\game_music.cpp
+
+1679204011 source:d:\uet\ltnc\sdl_game\start_game.cpp
+	"start_game.h"
+
+1679203635 d:\uet\ltnc\sdl_game\start_game.h
+	"img_object.h"
+	"setting.h"
+
+1679201948 d:\uet\ltnc\sdl_game\setting.h
+	"img_object.h"
 

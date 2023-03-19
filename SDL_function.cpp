@@ -87,6 +87,7 @@ void playMusic(Mix_Music *music)
     {
         // Play the music
         Mix_PlayMusic(music, -1);
+
     }
     // If music is being played
     else
@@ -108,6 +109,7 @@ void playMusic(Mix_Music *music)
 void playSound(Mix_Chunk *sound)
 {
     Mix_PlayChannel(-1, sound, 0);
+
 }
 //-------------------------------------------------------------------
 

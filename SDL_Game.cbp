@@ -39,6 +39,8 @@
 		<Unit filename="config.h" />
 		<Unit filename="game.cpp" />
 		<Unit filename="game.h" />
+		<Unit filename="game_music.cpp" />
+		<Unit filename="game_music.h" />
 		<Unit filename="img_object.cpp" />
 		<Unit filename="img_object.h" />
 		<Unit filename="main.cpp" />

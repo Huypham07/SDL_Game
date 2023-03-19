@@ -12,6 +12,9 @@ void ImgObject::load(const std::string &file, SDL_Renderer *renderer)
     SDL_QueryTexture(p_object, NULL, NULL, &destRect.w,&destRect.h);
     srcRect.w = destRect.w;
     srcRect.h = destRect.h;
+    srcRect.x = 0;
+    srcRect.y = 0;
+
 }
 
 void ImgObject::renderTexture(SDL_Renderer *renderer)
