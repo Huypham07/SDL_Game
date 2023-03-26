@@ -6,22 +6,22 @@
 #include <SDL.h>
 #include <SDL_image.h>
 #include <SDL_mixer.h>
+#include <SDL_ttf.h>
 
-//INIT
+// INIT
 void logSDLError(std::ostream &os,
                  const std::string &msg, bool fatal = false);
 void initSDL(SDL_Window *&window, SDL_Renderer *&renderer);
 void quitSDL(SDL_Window *window, SDL_Renderer *renderer);
 
-//IMAGE------------------------------------------------------
+// IMAGE------------------------------------------------------
 SDL_Texture *loadTexture(const std::string &file, SDL_Renderer *renderer);
 
-//MIXER------------------------------------------------------
+// MIXER------------------------------------------------------
 Mix_Music *loadMusic(const std::string &file);
 Mix_Chunk *loadSound(const std::string &file);
 void playMusic(Mix_Music *Music);
 void playSound(Mix_Chunk *sound);
-
+// TTF--------------------------------------------------------
+SDL_Texture *loadFont(const std::string &file, const std::string &text, SDL_Color textcolor, const int ptsize, SDL_Renderer *renderer);
 #endif // SDL_FUNCTION_H
-
-

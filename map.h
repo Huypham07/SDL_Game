@@ -3,6 +3,7 @@
 
 #include "game.h"
 
+
 const int win_tile = -1;
 struct Map_
 {
@@ -18,7 +19,6 @@ struct Map_
     void LoadMap(const std::string &file);
     void LoadTrap(const std::string &file);
     void DrawMap(SDL_Renderer *renderer);
-
 };
 
 #endif // MAP_H

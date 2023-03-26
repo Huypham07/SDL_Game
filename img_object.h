@@ -14,15 +14,15 @@ struct ImgObject
         destRect.x = x;
         destRect.y = y;
     }
-    void SetRect(const int &w, const int &h, const int &x, const int &y){
+    void SetRect(const int &w, const int &h, const int &x, const int &y)
+    {
         destRect.w = w;
         destRect.h = h;
         destRect.x = x;
         destRect.y = y;
     }
-    void load(const std::string &file,SDL_Renderer *renderer);
+    void load(const std::string &file, SDL_Renderer *renderer);
     void renderTexture(SDL_Renderer *renderer);
     void Free();
 };
 #endif // IMAGE_OBJECT_H
-

@@ -4,16 +4,16 @@ SDL_Window *gWindow = NULL;
 SDL_Renderer *gRenderer = NULL;
 SDL_Event gEvent;
 
-int main(int argv, char* argc[])
+int main(int argv, char *argc[])
 {
 
     const int FPS = 45;
-    const int frameDelay = 1000/FPS;
+    const int frameDelay = 1000 / FPS;
 
     Uint32 frameStart;
     int frameTime;
 
-    init(gWindow,gRenderer);
+    init(gWindow, gRenderer);
     bool isRunning = true;
     while (isRunning)
     {

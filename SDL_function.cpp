@@ -23,6 +23,12 @@ void initSDL(SDL_Window *&window, SDL_Renderer *&renderer)
     if (Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048) < 0)
         logSDLError(std::cout, "Mix_OpenAudio", true);
 
+    // Initialize SDL_ttf
+    if (TTF_Init() == -1)
+    {
+        printf("TTF_Init() failed: %s\n", TTF_GetError());
+    }
+
     window = SDL_CreateWindow(WINDOW_TITLE, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
     if (window == nullptr)
         logSDLError(std::cout, "CreateWindow", true);
@@ -40,7 +46,7 @@ void quitSDL(SDL_Window *window, SDL_Renderer *renderer)
     SDL_DestroyWindow(window);
     SDL_Quit();
 }
-//IMAGE------------------------------------------------------
+// IMAGE------------------------------------------------------
 SDL_Texture *loadTexture(const std::string &file, SDL_Renderer *renderer)
 {
     SDL_Texture *texture = nullptr;
@@ -87,7 +93,6 @@ void playMusic(Mix_Music *music)
     {
         // Play the music
         Mix_PlayMusic(music, -1);
-
     }
     // If music is being played
     else
@@ -109,7 +114,37 @@ void playMusic(Mix_Music *music)
 void playSound(Mix_Chunk *sound)
 {
     Mix_PlayChannel(-1, sound, 0);
-
 }
 //-------------------------------------------------------------------
+SDL_Texture *loadFont(const std::string &file, const std::string &text, SDL_Color textColor, const int ptsize, SDL_Renderer *renderer)
+{
+    SDL_Texture *texture = nullptr;
+    // Open the font
+    TTF_Font *gFont = TTF_OpenFont(file.c_str(), ptsize);
+    if (gFont == NULL)
+    {
+        printf("Failed to load font! SDL_ttf Error: %s\n", TTF_GetError());
+    }
+    else
+    {
+        // Render text
 
+        SDL_Surface *textSurface = TTF_RenderText_Solid(gFont, text.c_str(), textColor);
+        if (textSurface == NULL)
+        {
+            printf("Unable to render text surface! SDL_ttf Error: %s\n", TTF_GetError());
+        }
+        else
+        {
+            // Create texture from surface pixels
+            texture = SDL_CreateTextureFromSurface(renderer, textSurface);
+            if (texture == NULL)
+            {
+                logSDLError(std::cout, "CreateTextureFromSurface", true);
+            }
+            // Get rid of old surface
+            SDL_FreeSurface(textSurface);
+        }
+    }
+    return texture;
+}

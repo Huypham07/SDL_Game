@@ -19,8 +19,10 @@
 #define CHARACTER_WIDTH  30
 #define CHARACTER_HEIGHT 45
 
-//volume
-#define VOLUME_SCROLL_STEP 4
+// Ball
+#define BALL_WIDTH  128
+#define BALL_HEIGHT 128
+#define BALL_SPEED  12
 #endif /* _CONFIG_H_ */
 
 

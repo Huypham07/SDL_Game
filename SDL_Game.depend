@@ -5,59 +5,91 @@
 1678629376 d:\uet\ltnc\sdl_game\base_object.h
 	"SDL_function.h"
 
-1678629376 d:\uet\ltnc\sdl_game\sdl_function.h
+1679405781 d:\uet\ltnc\sdl_game\sdl_function.h
 	<iostream>
 	"config.h"
 	<SDL.h>
 	<SDL_image.h>
 	<SDL_mixer.h>
+	<SDL_ttf.h>
 
-1679148449 d:\uet\ltnc\sdl_game\config.h
+1679816116 d:\uet\ltnc\sdl_game\config.h
 
-1679197881 source:d:\uet\ltnc\sdl_game\main.cpp
+1679742269 source:d:\uet\ltnc\sdl_game\main.cpp
 	"game.h"
 
-1679109195 source:d:\uet\ltnc\sdl_game\sdl_function.cpp
+1679405787 source:d:\uet\ltnc\sdl_game\sdl_function.cpp
 	"SDL_function.h"
 
-1679204180 source:d:\uet\ltnc\sdl_game\game.cpp
+1679835264 source:d:\uet\ltnc\sdl_game\game.cpp
 	"game.h"
 	"Map.h"
 	"player.h"
 	"start_game.h"
+	"endgame.h"
+	"setting.h"
+	"ball.h"
 
 1678636298 d:\uet\ltnc\sdl_game\game.h
 	"img_object.h"
 
-1679152477 source:d:\uet\ltnc\sdl_game\map.cpp
+1679800349 source:d:\uet\ltnc\sdl_game\map.cpp
 	"map.h"
 	<fstream>
 
-1679148449 d:\uet\ltnc\sdl_game\map.h
+1679800349 d:\uet\ltnc\sdl_game\map.h
 	"game.h"
 
-1679201140 d:\uet\ltnc\sdl_game\player.h
+1679835216 d:\uet\ltnc\sdl_game\player.h
 	"img_object.h"
 	"map.h"
 
-1679201140 source:d:\uet\ltnc\sdl_game\player.cpp
+1679835227 source:d:\uet\ltnc\sdl_game\player.cpp
 	"player.h"
 
-1679203028 source:d:\uet\ltnc\sdl_game\img_object.cpp
+1679405817 source:d:\uet\ltnc\sdl_game\img_object.cpp
 	"img_object.h"
 
-1678640223 d:\uet\ltnc\sdl_game\img_object.h
+1679405813 d:\uet\ltnc\sdl_game\img_object.h
 	"SDL_function.h"
 
 1679109206 source:d:\uet\ltnc\sdl_game\game_music.cpp
 
-1679204011 source:d:\uet\ltnc\sdl_game\start_game.cpp
+1679831162 source:d:\uet\ltnc\sdl_game\start_game.cpp
 	"start_game.h"
 
-1679203635 d:\uet\ltnc\sdl_game\start_game.h
+1679822299 d:\uet\ltnc\sdl_game\start_game.h
 	"img_object.h"
+	"text_font.h"
 	"setting.h"
 
-1679201948 d:\uet\ltnc\sdl_game\setting.h
+1679733387 d:\uet\ltnc\sdl_game\setting.h
 	"img_object.h"
+	"text_font.h"
+
+1679742333 source:d:\uet\ltnc\sdl_game\setting.cpp
+	"setting.h"
+
+1679405736 source:d:\uet\ltnc\sdl_game\text_font.cpp
+	"text_font.h"
+
+1679405868 d:\uet\ltnc\sdl_game\text_font.h
+	"SDL_function.h"
+
+1679805877 source:d:\uet\ltnc\sdl_game\endgame.cpp
+	"endgame.h"
+
+1679805862 d:\uet\ltnc\sdl_game\endgame.h
+	"img_object.h"
+	"text_font.h"
+	"setting.h"
+	"player.h"
+	"start_game.h"
+
+1679833888 source:d:\uet\ltnc\sdl_game\ball.cpp
+	"ball.h"
+
+1679833773 d:\uet\ltnc\sdl_game\ball.h
+	"img_object.h"
+	"Map.h"
 
