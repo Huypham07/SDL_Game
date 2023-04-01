@@ -13,15 +13,15 @@
 	<SDL_mixer.h>
 	<SDL_ttf.h>
 
-1679816116 d:\uet\ltnc\sdl_game\config.h
+1680368389 d:\uet\ltnc\sdl_game\config.h
 
-1679742269 source:d:\uet\ltnc\sdl_game\main.cpp
+1679918316 source:d:\uet\ltnc\sdl_game\main.cpp
 	"game.h"
 
 1679405787 source:d:\uet\ltnc\sdl_game\sdl_function.cpp
 	"SDL_function.h"
 
-1679835264 source:d:\uet\ltnc\sdl_game\game.cpp
+1680369578 source:d:\uet\ltnc\sdl_game\game.cpp
 	"game.h"
 	"Map.h"
 	"player.h"
@@ -30,7 +30,7 @@
 	"setting.h"
 	"ball.h"
 
-1678636298 d:\uet\ltnc\sdl_game\game.h
+1679918345 d:\uet\ltnc\sdl_game\game.h
 	"img_object.h"
 
 1679800349 source:d:\uet\ltnc\sdl_game\map.cpp
@@ -40,11 +40,11 @@
 1679800349 d:\uet\ltnc\sdl_game\map.h
 	"game.h"
 
-1679835216 d:\uet\ltnc\sdl_game\player.h
+1680368324 d:\uet\ltnc\sdl_game\player.h
 	"img_object.h"
 	"map.h"
 
-1679835227 source:d:\uet\ltnc\sdl_game\player.cpp
+1680368904 source:d:\uet\ltnc\sdl_game\player.cpp
 	"player.h"
 
 1679405817 source:d:\uet\ltnc\sdl_game\img_object.cpp
@@ -55,7 +55,7 @@
 
 1679109206 source:d:\uet\ltnc\sdl_game\game_music.cpp
 
-1679831162 source:d:\uet\ltnc\sdl_game\start_game.cpp
+1680369451 source:d:\uet\ltnc\sdl_game\start_game.cpp
 	"start_game.h"
 
 1679822299 d:\uet\ltnc\sdl_game\start_game.h
@@ -67,7 +67,7 @@
 	"img_object.h"
 	"text_font.h"
 
-1679742333 source:d:\uet\ltnc\sdl_game\setting.cpp
+1680368904 source:d:\uet\ltnc\sdl_game\setting.cpp
 	"setting.h"
 
 1679405736 source:d:\uet\ltnc\sdl_game\text_font.cpp
@@ -76,10 +76,10 @@
 1679405868 d:\uet\ltnc\sdl_game\text_font.h
 	"SDL_function.h"
 
-1679805877 source:d:\uet\ltnc\sdl_game\endgame.cpp
+1679919002 source:d:\uet\ltnc\sdl_game\endgame.cpp
 	"endgame.h"
 
-1679805862 d:\uet\ltnc\sdl_game\endgame.h
+1679919002 d:\uet\ltnc\sdl_game\endgame.h
 	"img_object.h"
 	"text_font.h"
 	"setting.h"

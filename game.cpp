@@ -48,6 +48,7 @@ bool check_ball_collision(Ball *B, player *P){
     if ((cx-bx) * (cx-bx) + (cy-by) * (cy-by) < r * r)
     {
         B->is_move = false;
+        P->die = true;
         P->stopGame();
         return true;
     }
@@ -79,10 +80,15 @@ void init(SDL_Window *&window, SDL_Renderer *&renderer)
         list_ball[i] = new Ball();
         list_ball[i]->setFrame_src("image/ball.png", renderer);
     }
-    list_ball[0]->set_pos(80 * TILE_SIZE,3 * TILE_SIZE);
-    list_ball[1]->set_pos(100 * TILE_SIZE,3 * TILE_SIZE);
 }
-
+void restart_game()
+{
+    if (!Start_->state)
+    {
+        list_ball[0]->set_pos(80 * TILE_SIZE,3 * TILE_SIZE);
+        list_ball[1]->set_pos(100 * TILE_SIZE,3 * TILE_SIZE);
+    }
+}
 void handleEvent(bool &isRunning, SDL_Event e)
 {
     while (SDL_PollEvent(&e) != 0)

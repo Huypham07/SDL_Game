@@ -32,14 +32,13 @@ struct player
     SDL_Rect frame_src[6];
     int frame;
 
-    //sound
     Mix_Chunk *pJump;
 
     player();
     void setFrame_src(const std::string &file, SDL_Renderer *renderer);
     void Gravity();
     void InputEvent(SDL_Event e);
-    bool check_index_trap(const int index); // nếu như index bằng với trap thì trả về true
+    bool check_index_trap(const int index);
     void Check_limited_Pos_X(Map_ *map_);
     void Check_limited_Pos_Y(Map_ *map_);
     void handleInput(Map_ *map_);

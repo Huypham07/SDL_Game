@@ -80,23 +80,23 @@ void Setting::handle_setting(SDL_Event e, bool &isRunning){
         {
             if (state){
 
-                    // Check if the mouse is over the music volume bar
+                    // Check nếu như chuột ở thanh music
                     if (e.button.x >= music_vol_bar_x && e.button.x <= music_vol_bar_x + music_vol_bar_w &&
                         e.button.y >= filled_rects[1][0].y && e.button.y <= filled_rects[1][0].y + filled_rects[1][0].h) {
                         playSound(Click);// sound click
-                        // Calculate the volume level based on the mouse position
+                        // Tính toán âm lượng dựa trên vị trí của chuột
                         Mvol = ((float)(e.button.x - music_vol_bar_x) / music_vol_bar_w) * MIX_MAX_VOLUME;
-                        // Set the music volume using the set_music_volume() function
+                        // Đặt lại âm lượng bằng hàm đã định nghĩa
                         set_music_volume(Mvol);
                     }
 
-                    // Check if the mouse is over the chunk volume bar
+                    // Check nếu như chuột ở thanh sound
                     if (e.button.x >= sound_vol_bar_x && e.button.x <= sound_vol_bar_x + sound_vol_bar_w &&
                         e.button.y >= filled_rects[1][1].y && e.button.y <= filled_rects[1][1].y + filled_rects[1][1].h) {
                         playSound(Click);// sound click
-                        // Calculate the volume level based on the mouse position
+                        // Tính toán âm lượng dựa trên vị trí của chuột
                         Svol = ((float)(e.button.x - sound_vol_bar_x) / sound_vol_bar_w) * MIX_MAX_VOLUME;
-                        // Set the chunk volume using the set_chunk_volume() function
+                        // Đặt lại âm lượng bằng hàm đã định nghĩa
                         set_chunk_volume(Svol);
                     }
                 for (int i=0;i<2;i++)
@@ -216,6 +216,7 @@ void Setting::show(SDL_Renderer *renderer){
         volume[0].renderTexture(renderer);
         volume[1].renderTexture(renderer);
 
+        // setup chiều dài của thanh volume
         filled_rects[1][0].w = music_vol_bar_w * Mvol / MIX_MAX_VOLUME;
         filled_rects[1][1].w = sound_vol_bar_w * Svol / MIX_MAX_VOLUME;
 

@@ -165,6 +165,7 @@ void player::Check_limited_Pos_Y(Map_ *map_)
                         y_pos = y_down * TILE_SIZE - player_rect.h;
                         jump_valid = true;
             }
+            else jump_valid = false;
         }
         else if (y_change < 0) // lên
         {
@@ -211,6 +212,7 @@ void player::renderFrame(SDL_Renderer *renderer, Map_ *map_)
         {
             if (frame_src[0].y == h_frame || frame_src[0].y == 3 * h_frame || frame_src[0].y == 5 * h_frame || frame_src[0].y == 7 * h_frame)
             {
+                // nếu như thời điểm trc khi xảy ra sự kiện là quay sang trái
                 for (int i = 0; i < 6; i++)
                 {
                     frame_src[i].y = 7 * h_frame;
@@ -218,6 +220,7 @@ void player::renderFrame(SDL_Renderer *renderer, Map_ *map_)
             }
             else
             {
+                // nếu như quay sang phải
                 for (int i = 0; i < 6; i++)
                 {
                     frame_src[i].y = 6 * h_frame;
@@ -335,6 +338,7 @@ void player::trap_checking(Map_ *map_)
         {
             if (map_->trap[y_up][x_left] == 0) //check hint trap
                 map_->trap[y_up][x_left] = 1;
+            die = true;
             stopGame();
         }
     }
@@ -344,6 +348,7 @@ void player::trap_checking(Map_ *map_)
         {
             if (map_->trap[y_up][x_right] == 0)
                 map_->trap[y_up][x_right] = 1;
+            die = true;
             stopGame();
         }
     }
@@ -355,6 +360,7 @@ void player::trap_checking(Map_ *map_)
         {
             if (map_->trap[y_down][x_left] == 0)
                 map_->trap[y_down][x_left] = 1;
+            die = true;
             stopGame();
         }
     }
@@ -364,6 +370,7 @@ void player::trap_checking(Map_ *map_)
         {
             if (map_->trap[y_down][x_right] == 0)
                 map_->trap[y_down][x_right] = 1;
+            die = true;
             stopGame();
         }
     }
@@ -390,5 +397,4 @@ void player::stopGame()
     current.stt_up = false;
     current.stt_right = false;
     current.stt_left = false;
-    die = true;
 }

@@ -22,7 +22,7 @@
 // Ball
 #define BALL_WIDTH  128
 #define BALL_HEIGHT 128
-#define BALL_SPEED  12
+#define BALL_SPEED  15
 #endif /* _CONFIG_H_ */
 
 
