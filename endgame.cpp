@@ -15,7 +15,7 @@ EndGame::EndGame(SDL_Renderer *renderer)
     text.Set_ptsize(100);
     text.SetColor(255, 204, 153);
     text.SetRect(SCREEN_WIDTH * 4 / 5, TILE_SIZE, SCREEN_WIDTH / 2 - SCREEN_WIDTH * 4 / 10, SCREEN_HEIGHT / 2 + TILE_SIZE);
-    text.load("font/PermanentMarker-Regular.ttf", "Click  anywhere  outside  the  Setting  to  return  to  the  Start  Page !", renderer);
+    text.load("font/PermanentMarker-Regular.ttf", "Click  anywhere  to  return  to  the  Start  Page !", renderer);
 
 }
 void EndGame::handle_click(SDL_Event e, Setting *setting_, Map_ *map_, player *player_, start_game * start_game_)

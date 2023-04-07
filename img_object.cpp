@@ -2,13 +2,13 @@
 
 ImgObject::ImgObject()
 {
-    p_object = NULL;
+    p_object = nullptr;
 }
 
 void ImgObject::load(const std::string &file, SDL_Renderer *renderer)
 {
     p_object = loadTexture(file, renderer);
-    SDL_QueryTexture(p_object, NULL, NULL, &destRect.w, &destRect.h);
+    SDL_QueryTexture(p_object, nullptr, nullptr, &destRect.w, &destRect.h);
     srcRect.w = destRect.w;
     srcRect.h = destRect.h;
     srcRect.x = 0;
@@ -23,5 +23,5 @@ void ImgObject::renderTexture(SDL_Renderer *renderer)
 void ImgObject::Free()
 {
     SDL_DestroyTexture(p_object);
-    p_object = NULL;
+    p_object = nullptr;
 }

@@ -19,13 +19,13 @@ player::player()
 
     die = false;
     // sound
-    pJump = NULL;
+    pJump = nullptr;
 }
 
 void player::setFrame_src(const std::string &file, SDL_Renderer *renderer)
 {
     mplayer = loadTexture(file, renderer);
-    SDL_QueryTexture(mplayer, NULL, NULL, &w_frame, &h_frame);
+    SDL_QueryTexture(mplayer, nullptr, nullptr, &w_frame, &h_frame);
     w_frame /= 6;
     h_frame /= 8;
     for (int i = 0; i < 6; i++)
@@ -317,9 +317,9 @@ void player::renderFrame(SDL_Renderer *renderer, Map_ *map_)
         }
     }
 
-    SDL_RenderCopy(renderer, mplayer, &frame_src[frame], &player_rect);
+    SDL_RenderCopy(renderer, mplayer, &frame_src[frame / 6], &player_rect);
     frame++;
-    if (frame >= 6)
+    if (frame / 6 >= 6)
         frame = 0;
 }
 void player::trap_checking(Map_ *map_)

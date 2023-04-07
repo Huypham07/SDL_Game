@@ -24,7 +24,7 @@ void text_font::SetRect(const int &w, const int &h, const int &x, const int &y)
 }
 void text_font::renderTexture(SDL_Renderer *renderer)
 {
-    SDL_RenderCopy(renderer, texture, NULL, &rect);
+    SDL_RenderCopy(renderer, texture, nullptr, &rect);
 }
 void text_font::Free()
 {

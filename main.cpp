@@ -1,33 +1,20 @@
 #include "game.h"
 
-SDL_Window *gWindow = NULL;
-SDL_Renderer *gRenderer = NULL;
+SDL_Window *gWindow = nullptr;
+SDL_Renderer *gRenderer = nullptr;
 SDL_Event gEvent;
 
 int main(int argv, char *argc[])
 {
-
-    const int FPS = 45;
-    const int frameDelay = 1000 / FPS;
-
-    Uint32 frameStart;
-    int frameTime;
-
     init(gWindow, gRenderer);
     bool isRunning = true;
     while (isRunning)
     {
-        frameStart = SDL_GetTicks();
         restart_game();
         handleEvent(isRunning, gEvent);
         update();
         render(gRenderer);
-
-        frameTime = SDL_GetTicks() - frameStart;
-        if (frameDelay > frameTime)
-        {
-            SDL_Delay(frameDelay - frameTime);
-        }
+        SDL_Delay(5);
     }
     clean(gWindow, gRenderer);
     return 0;

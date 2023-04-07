@@ -74,12 +74,10 @@ Setting::Setting(SDL_Renderer *renderer)
     state = false;
 }
 void Setting::handle_setting(SDL_Event e, bool &isRunning){
-
     if (e.type == SDL_MOUSEBUTTONUP){
         if (e.button.button == SDL_BUTTON_LEFT)
         {
             if (state){
-
                     // Check nếu như chuột ở thanh music
                     if (e.button.x >= music_vol_bar_x && e.button.x <= music_vol_bar_x + music_vol_bar_w &&
                         e.button.y >= filled_rects[1][0].y && e.button.y <= filled_rects[1][0].y + filled_rects[1][0].h) {
@@ -89,7 +87,6 @@ void Setting::handle_setting(SDL_Event e, bool &isRunning){
                         // Đặt lại âm lượng bằng hàm đã định nghĩa
                         set_music_volume(Mvol);
                     }
-
                     // Check nếu như chuột ở thanh sound
                     if (e.button.x >= sound_vol_bar_x && e.button.x <= sound_vol_bar_x + sound_vol_bar_w &&
                         e.button.y >= filled_rects[1][1].y && e.button.y <= filled_rects[1][1].y + filled_rects[1][1].h) {
@@ -112,7 +109,6 @@ void Setting::handle_setting(SDL_Event e, bool &isRunning){
                         playSound(Click);// sound click
                     }
                 }
-
             }
             else
             {
@@ -159,7 +155,7 @@ void Setting::handle_setting(SDL_Event e, bool &isRunning){
                     if (Mvol < MIX_MAX_VOLUME) {
                         Mvol += 4;
                     }
-                    else Mvol = MIX_MAX_VOLUME;
+                    if (Mvol >= MIX_MAX_VOLUME) Mvol = MIX_MAX_VOLUME;
                     set_music_volume(Mvol);
                 }
                 else if (e.wheel.y < 0) {
@@ -167,7 +163,7 @@ void Setting::handle_setting(SDL_Event e, bool &isRunning){
                     if (Mvol > 0) {
                         Mvol -= 4;
                     }
-                    else Mvol = 0;
+                    if (Mvol <= 0) Mvol = 0;
                     set_music_volume(Mvol);
                 }
             }
@@ -176,18 +172,14 @@ void Setting::handle_setting(SDL_Event e, bool &isRunning){
             {
                 if (e.wheel.y > 0) {
                     // Scrolled up
-                    if (Svol < MIX_MAX_VOLUME) {
-                        Svol += 4;
-                    }
-                    else Svol = MIX_MAX_VOLUME;
+                    if (Svol < MIX_MAX_VOLUME) Svol += 4;
+                    if (Svol >= MIX_MAX_VOLUME) Svol = MIX_MAX_VOLUME;
                     set_chunk_volume(Svol);
                 }
                 else if (e.wheel.y < 0) {
                     // Scrolled down
-                    if (Svol > 0) {
-                        Svol -= 4;
-                    }
-                    else Svol = 0;
+                    if (Svol > 0) Svol -= 4;
+                    if (Svol <= 0) Svol = 0;
                     set_chunk_volume(Svol);
                 }
             }

@@ -69,9 +69,9 @@ SDL_Texture *loadTexture(const std::string &file, SDL_Renderer *renderer)
 //-----------------------------------------------------------------------------------------
 Mix_Music *loadMusic(const std::string &file)
 {
-    Mix_Music *music = NULL;
+    Mix_Music *music = nullptr;
     music = Mix_LoadMUS(file.c_str());
-    if (music == NULL)
+    if (music == nullptr)
     {
         logSDLError(std::cout, "MIX_LoadMUS", true);
     }
@@ -79,9 +79,9 @@ Mix_Music *loadMusic(const std::string &file)
 }
 Mix_Chunk *loadSound(const std::string &file)
 {
-    Mix_Chunk *sound = NULL;
+    Mix_Chunk *sound = nullptr;
     sound = Mix_LoadWAV(file.c_str());
-    if (sound == NULL)
+    if (sound == nullptr)
     {
         logSDLError(std::cout, "MIX_LoadMUS", true);
     }
@@ -121,7 +121,7 @@ SDL_Texture *loadFont(const std::string &file, const std::string &text, SDL_Colo
     SDL_Texture *texture = nullptr;
     // Open the font
     TTF_Font *gFont = TTF_OpenFont(file.c_str(), ptsize);
-    if (gFont == NULL)
+    if (gFont == nullptr)
     {
         printf("Failed to load font! SDL_ttf Error: %s\n", TTF_GetError());
     }
@@ -130,7 +130,7 @@ SDL_Texture *loadFont(const std::string &file, const std::string &text, SDL_Colo
         // Render text
 
         SDL_Surface *textSurface = TTF_RenderText_Solid(gFont, text.c_str(), textColor);
-        if (textSurface == NULL)
+        if (textSurface == nullptr)
         {
             printf("Unable to render text surface! SDL_ttf Error: %s\n", TTF_GetError());
         }
@@ -138,7 +138,7 @@ SDL_Texture *loadFont(const std::string &file, const std::string &text, SDL_Colo
         {
             // Create texture from surface pixels
             texture = SDL_CreateTextureFromSurface(renderer, textSurface);
-            if (texture == NULL)
+            if (texture == nullptr)
             {
                 logSDLError(std::cout, "CreateTextureFromSurface", true);
             }
