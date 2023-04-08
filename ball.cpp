@@ -29,17 +29,17 @@ void Ball::set_pos(const int &x,const int &y)
 void Ball::renderFrame(SDL_Renderer *renderer, Map_ *map_)
 {
     ball_.SetRect(BALL_WIDTH,BALL_HEIGHT,x_pos - map_->Mpos_x, y_pos);
-    ball_.srcRect = frame_src[frame];
+    ball_.srcRect = frame_src[frame/2];
     ball_.renderTexture(renderer);
     if (is_move)
     {
         if (direction == -1){
             frame ++;
-            if (frame >= 12) frame = 0;
+            if (frame >= 24) frame = 0;
         }
         else{
             frame--;
-            if (frame < 0) frame = 11;
+            if (frame < 0) frame = 23;
         }
     }
 }

@@ -319,7 +319,7 @@ void player::renderFrame(SDL_Renderer *renderer, Map_ *map_)
 
     SDL_RenderCopy(renderer, mplayer, &frame_src[frame / 6], &player_rect);
     frame++;
-    if (frame / 6 >= 6)
+    if (frame >= 36)
         frame = 0;
 }
 void player::trap_checking(Map_ *map_)
