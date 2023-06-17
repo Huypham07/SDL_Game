@@ -377,7 +377,7 @@ void player::trap_checking(Map_ *map_)
 }
 bool player::WinState(Map_ *map_)
 {
-    if (player_rect.x + player_rect.w > map_->Win_flag.destRect.x)
+    if (player_rect.x + player_rect.w > map_->Win_flag.destRect.x && player_rect.y + player_rect.h <= map_->Win_flag.destRect.y + map_->Win_flag.destRect.h)
     {
         stopGame();
         return true;

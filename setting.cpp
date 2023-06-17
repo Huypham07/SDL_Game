@@ -117,7 +117,7 @@ void Setting::handle_setting(SDL_Event e, bool &isRunning){
                 {
                     state = true;
                     text.SetColor(255,51,51);
-                    for (int i=0;i<3;i++){
+                    for (int i=0;i<2;i++){
                         func[i].SetColor(32, 32, 32);
                     }
                     playSound(Click);// sound click

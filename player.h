@@ -2,7 +2,7 @@
 #define PLAYER_H
 
 #include "img_object.h"
-#include "map.h"
+#include "Map.h"
 
 
 struct player_state

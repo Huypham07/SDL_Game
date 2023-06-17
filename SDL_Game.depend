@@ -15,13 +15,13 @@
 
 1680801917 d:\uet\ltnc\sdl_game\config.h
 
-1680849857 source:d:\uet\ltnc\sdl_game\main.cpp
+1683575645 source:d:\uet\ltnc\sdl_game\main.cpp
 	"game.h"
 
 1680848221 source:d:\uet\ltnc\sdl_game\sdl_function.cpp
 	"SDL_function.h"
 
-1680766552 source:d:\uet\ltnc\sdl_game\game.cpp
+1682013689 source:d:\uet\ltnc\sdl_game\game.cpp
 	"game.h"
 	"Map.h"
 	"player.h"
@@ -30,21 +30,26 @@
 	"setting.h"
 	"ball.h"
 
-1679918345 d:\uet\ltnc\sdl_game\game.h
+1683564834 d:\uet\ltnc\sdl_game\game.h
 	"img_object.h"
+	"Map.h"
+	"player.h"
+	"GameUtility.h"
+	"ball.h"
+	<vector>
 
-1679800349 source:d:\uet\ltnc\sdl_game\map.cpp
+1682630791 source:d:\uet\ltnc\sdl_game\map.cpp
 	"map.h"
 	<fstream>
 
-1679800349 d:\uet\ltnc\sdl_game\map.h
-	"game.h"
-
-1680368324 d:\uet\ltnc\sdl_game\player.h
+1683565834 d:\uet\ltnc\sdl_game\map.h
 	"img_object.h"
-	"map.h"
 
-1680935624 source:d:\uet\ltnc\sdl_game\player.cpp
+1683565741 d:\uet\ltnc\sdl_game\player.h
+	"img_object.h"
+	"Map.h"
+
+1683567399 source:d:\uet\ltnc\sdl_game\player.cpp
 	"player.h"
 
 1680850011 source:d:\uet\ltnc\sdl_game\img_object.cpp
@@ -67,7 +72,7 @@
 	"img_object.h"
 	"text_font.h"
 
-1680710466 source:d:\uet\ltnc\sdl_game\setting.cpp
+1682629523 source:d:\uet\ltnc\sdl_game\setting.cpp
 	"setting.h"
 
 1680848221 source:d:\uet\ltnc\sdl_game\text_font.cpp
@@ -76,20 +81,126 @@
 1679405868 d:\uet\ltnc\sdl_game\text_font.h
 	"SDL_function.h"
 
-1680859144 source:d:\uet\ltnc\sdl_game\endgame.cpp
+1682013689 source:d:\uet\ltnc\sdl_game\endgame.cpp
 	"endgame.h"
 
-1679919002 d:\uet\ltnc\sdl_game\endgame.h
+1682013689 d:\uet\ltnc\sdl_game\endgame.h
 	"img_object.h"
 	"text_font.h"
 	"setting.h"
 	"player.h"
 	"start_game.h"
 
-1680803437 source:d:\uet\ltnc\sdl_game\ball.cpp
+1680936105 source:d:\uet\ltnc\sdl_game\ball.cpp
 	"ball.h"
 
-1679833773 d:\uet\ltnc\sdl_game\ball.h
+1683565476 d:\uet\ltnc\sdl_game\ball.h
 	"img_object.h"
 	"Map.h"
+
+1680936105 source:c:\users\huyho\onedrive\desktop\sdl_game\ball.cpp
+	"ball.h"
+
+1683565476 c:\users\huyho\onedrive\desktop\sdl_game\ball.h
+	"img_object.h"
+	"Map.h"
+
+1679405813 c:\users\huyho\onedrive\desktop\sdl_game\img_object.h
+	"SDL_function.h"
+
+1679405781 c:\users\huyho\onedrive\desktop\sdl_game\sdl_function.h
+	<iostream>
+	"config.h"
+	<SDL.h>
+	<SDL_image.h>
+	<SDL_mixer.h>
+	<SDL_ttf.h>
+
+1680801917 c:\users\huyho\onedrive\desktop\sdl_game\config.h
+
+1683565834 c:\users\huyho\onedrive\desktop\sdl_game\map.h
+	"img_object.h"
+
+1683564834 c:\users\huyho\onedrive\desktop\sdl_game\game.h
+	"img_object.h"
+	"Map.h"
+	"player.h"
+	"GameUtility.h"
+	"ball.h"
+	<vector>
+
+1682013689 source:c:\users\huyho\onedrive\desktop\sdl_game\endgame.cpp
+	"endgame.h"
+
+1682013689 c:\users\huyho\onedrive\desktop\sdl_game\endgame.h
+	"img_object.h"
+	"text_font.h"
+	"setting.h"
+	"player.h"
+	"start_game.h"
+
+1679405868 c:\users\huyho\onedrive\desktop\sdl_game\text_font.h
+	"SDL_function.h"
+
+1679733387 c:\users\huyho\onedrive\desktop\sdl_game\setting.h
+	"img_object.h"
+	"text_font.h"
+
+1683565741 c:\users\huyho\onedrive\desktop\sdl_game\player.h
+	"img_object.h"
+	"Map.h"
+
+1679822299 c:\users\huyho\onedrive\desktop\sdl_game\start_game.h
+	"img_object.h"
+	"text_font.h"
+	"setting.h"
+
+1680850011 source:c:\users\huyho\onedrive\desktop\sdl_game\img_object.cpp
+	"img_object.h"
+
+1683575645 source:c:\users\huyho\onedrive\desktop\sdl_game\main.cpp
+	"game.h"
+
+1682630791 source:c:\users\huyho\onedrive\desktop\sdl_game\map.cpp
+	"map.h"
+	<fstream>
+
+1683567399 source:c:\users\huyho\onedrive\desktop\sdl_game\player.cpp
+	"player.h"
+
+1680848221 source:c:\users\huyho\onedrive\desktop\sdl_game\sdl_function.cpp
+	"SDL_function.h"
+
+1682629523 source:c:\users\huyho\onedrive\desktop\sdl_game\setting.cpp
+	"setting.h"
+
+1680369451 source:c:\users\huyho\onedrive\desktop\sdl_game\start_game.cpp
+	"start_game.h"
+
+1680848221 source:c:\users\huyho\onedrive\desktop\sdl_game\text_font.cpp
+	"text_font.h"
+
+1683557361 source:c:\users\huyho\onedrive\desktop\sdl_game\game.cpp
+	"game.h"
+	"Map.h"
+	"player.h"
+	"start_game.h"
+	"endgame.h"
+	"setting.h"
+	"ball.h"
+	<vector>
+
+1683571627 c:\users\huyho\onedrive\desktop\sdl_game\gameutility.h
+	"img_object.h"
+	"text_font.h"
+
+1683575334 source:c:\users\huyho\onedrive\desktop\sdl_game\gameutility.cpp
+	"GameUtility.h"
+
+1683575334 source:d:\uet\ltnc\sdl_game\gameutility.cpp
+	"GameUtility.h"
+
+1683571627 d:\uet\ltnc\sdl_game\gameutility.h
+	"img_object.h"
+	"text_font.h"
 

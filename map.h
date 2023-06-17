@@ -1,7 +1,7 @@
 #ifndef MAP_H
 #define MAP_H
 
-#include "game.h"
+#include "img_object.h"
 
 
 const int win_tile = -1;
